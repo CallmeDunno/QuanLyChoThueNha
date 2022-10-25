@@ -14,14 +14,10 @@ namespace QuanLyChoThueNha
         [STAThread]
         static void Main()
         {
-            //dung
-            //dung3
             Application.EnableVisualStyles();
-            //hehe
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fMain());
-            //edit
-            Application.Run(new SplashScreen());
+            //Edit
         }
     }
 }
