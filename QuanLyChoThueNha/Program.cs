@@ -14,7 +14,6 @@ namespace QuanLyChoThueNha
         [STAThread]
         static void Main()
         {
-            //Dung
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fMain());
