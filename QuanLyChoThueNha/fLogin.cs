@@ -48,9 +48,6 @@ namespace QuanLyChoThueNha
                 txtPassword.Clear();
                 MessageBox.Show("Đăng nhập không thành công! Vui lòng nhập lại Tên đăng nhập và mật khẩu!", "Thông báo", MessageBoxButtons.OK ,MessageBoxIcon.Warning);
             }
-            
-            
-            
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
