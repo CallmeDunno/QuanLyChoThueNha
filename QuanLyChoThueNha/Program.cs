@@ -16,6 +16,7 @@ namespace QuanLyChoThueNha
         {
             //dung
             //dung3
+            //edit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fMain());
