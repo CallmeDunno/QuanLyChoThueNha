@@ -34,6 +34,7 @@ namespace QuanLyChoThueNha
         {
             string user = txtUsername.Text.Trim();
             string pass = txtPassword.Text.Trim();
+            //Thuan'note
             if(user.Equals("admin") && pass.Equals("admin"))
             {
                 txtUsername.Clear();
