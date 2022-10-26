@@ -18,6 +18,7 @@ namespace QuanLyChoThueNha
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fMain());
             //Edit
+            //Edit
         }
     }
 }
