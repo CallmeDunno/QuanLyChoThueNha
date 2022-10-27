@@ -76,11 +76,11 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="fThueNha.cs">
+    <Compile Include="fTraNha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fThueNha.Designer.cs">
-      <DependentUpon>fThueNha.cs</DependentUpon>
+    <Compile Include="fTraNha.Designer.cs">
+      <DependentUpon>fTraNha.cs</DependentUpon>
     </Compile>
     <Compile Include="fTimKiem.cs">
       <SubType>Form</SubType>
@@ -118,8 +118,8 @@
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fThueNha.resx">
-      <DependentUpon>fThueNha.cs</DependentUpon>
+    <EmbeddedResource Include="fTraNha.resx">
+      <DependentUpon>fTraNha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTimKiem.resx">
       <DependentUpon>fTimKiem.cs</DependentUpon>
