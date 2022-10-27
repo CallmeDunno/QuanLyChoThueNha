@@ -31,6 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpXuatExcel = new System.Windows.Forms.TabPage();
             this.tpXuatHopDong = new System.Windows.Forms.TabPage();
+            this.tpXuatBaoCao = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,6 +39,7 @@
             // 
             this.tabControl1.Controls.Add(this.tpXuatExcel);
             this.tabControl1.Controls.Add(this.tpXuatHopDong);
+            this.tabControl1.Controls.Add(this.tpXuatBaoCao);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -65,6 +67,16 @@
             this.tpXuatHopDong.Text = "Hợp đồng";
             this.tpXuatHopDong.UseVisualStyleBackColor = true;
             // 
+            // tpXuatBaoCao
+            // 
+            this.tpXuatBaoCao.Location = new System.Drawing.Point(4, 29);
+            this.tpXuatBaoCao.Name = "tpXuatBaoCao";
+            this.tpXuatBaoCao.Padding = new System.Windows.Forms.Padding(3);
+            this.tpXuatBaoCao.Size = new System.Drawing.Size(1214, 767);
+            this.tpXuatBaoCao.TabIndex = 2;
+            this.tpXuatBaoCao.Text = "Báo cáo";
+            this.tpXuatBaoCao.UseVisualStyleBackColor = true;
+            // 
             // fXuatFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -85,5 +97,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpXuatExcel;
         private System.Windows.Forms.TabPage tpXuatHopDong;
+        private System.Windows.Forms.TabPage tpXuatBaoCao;
     }
 }
