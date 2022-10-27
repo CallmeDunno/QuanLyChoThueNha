@@ -34,7 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnThue = new System.Windows.Forms.Button();
+            this.btnTraNha = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnDMN = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.btnKhachThueNha);
             this.panel1.Controls.Add(this.btnXuatFile);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnThue);
+            this.panel1.Controls.Add(this.btnTraNha);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnDMN);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -116,16 +116,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý cho thuê nhà";
             // 
-            // btnThue
+            // btnTraNha
             // 
-            this.btnThue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThue.Location = new System.Drawing.Point(0, 283);
-            this.btnThue.Name = "btnThue";
-            this.btnThue.Size = new System.Drawing.Size(200, 53);
-            this.btnThue.TabIndex = 3;
-            this.btnThue.Text = "Thuê nhà";
-            this.btnThue.UseVisualStyleBackColor = true;
-            this.btnThue.Click += new System.EventHandler(this.btnThue_Click);
+            this.btnTraNha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTraNha.Location = new System.Drawing.Point(0, 283);
+            this.btnTraNha.Name = "btnTraNha";
+            this.btnTraNha.Size = new System.Drawing.Size(200, 53);
+            this.btnTraNha.TabIndex = 3;
+            this.btnTraNha.Text = "Trả nhà";
+            this.btnTraNha.UseVisualStyleBackColor = true;
+            this.btnTraNha.Click += new System.EventHandler(this.btnThue_Click);
             // 
             // btnTimKiem
             // 
@@ -233,7 +233,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnThue;
+        private System.Windows.Forms.Button btnTraNha;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnDMN;
         private System.Windows.Forms.PictureBox pictureBox1;
