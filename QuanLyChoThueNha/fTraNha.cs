@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyChoThueNha
 {
-    public partial class fThueNha : Form
+    public partial class fTraNha : Form
     {
-        public fThueNha()
+        public fTraNha()
         {
             InitializeComponent();
         }

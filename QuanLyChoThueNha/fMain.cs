@@ -67,7 +67,7 @@ namespace QuanLyChoThueNha
 
         private void btnThue_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fThueNha());
+            OpenChildForm(new fTraNha());
         }
 
         private void btnXuatFile_Click(object sender, EventArgs e)

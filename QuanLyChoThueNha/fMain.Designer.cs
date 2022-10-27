@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnKhachThueNha = new System.Windows.Forms.Button();
+            this.btnXuatFile = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnXuatFile = new System.Windows.Forms.Button();
-            this.btnKhachThueNha = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +64,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 805);
             this.panel1.TabIndex = 0;
+            // 
+            // btnKhachThueNha
+            // 
+            this.btnKhachThueNha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKhachThueNha.Location = new System.Drawing.Point(0, 386);
+            this.btnKhachThueNha.Name = "btnKhachThueNha";
+            this.btnKhachThueNha.Size = new System.Drawing.Size(200, 56);
+            this.btnKhachThueNha.TabIndex = 6;
+            this.btnKhachThueNha.Text = "Khách thuê";
+            this.btnKhachThueNha.UseVisualStyleBackColor = true;
+            this.btnKhachThueNha.Click += new System.EventHandler(this.btnKhachThueNha_Click);
+            // 
+            // btnXuatFile
+            // 
+            this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXuatFile.Location = new System.Drawing.Point(0, 336);
+            this.btnXuatFile.Name = "btnXuatFile";
+            this.btnXuatFile.Size = new System.Drawing.Size(200, 50);
+            this.btnXuatFile.TabIndex = 5;
+            this.btnXuatFile.Text = "Thống kê";
+            this.btnXuatFile.UseVisualStyleBackColor = true;
+            this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
             // 
             // panel2
             // 
@@ -181,28 +203,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnXuatFile
-            // 
-            this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXuatFile.Location = new System.Drawing.Point(0, 336);
-            this.btnXuatFile.Name = "btnXuatFile";
-            this.btnXuatFile.Size = new System.Drawing.Size(200, 50);
-            this.btnXuatFile.TabIndex = 5;
-            this.btnXuatFile.Text = "Thống kê";
-            this.btnXuatFile.UseVisualStyleBackColor = true;
-            this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
-            // 
-            // btnKhachThueNha
-            // 
-            this.btnKhachThueNha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKhachThueNha.Location = new System.Drawing.Point(0, 386);
-            this.btnKhachThueNha.Name = "btnKhachThueNha";
-            this.btnKhachThueNha.Size = new System.Drawing.Size(200, 56);
-            this.btnKhachThueNha.TabIndex = 6;
-            this.btnKhachThueNha.Text = "Khách thuê";
-            this.btnKhachThueNha.UseVisualStyleBackColor = true;
-            this.btnKhachThueNha.Click += new System.EventHandler(this.btnKhachThueNha_Click);
             // 
             // fMain
             // 

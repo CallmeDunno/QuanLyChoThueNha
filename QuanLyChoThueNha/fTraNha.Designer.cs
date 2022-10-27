@@ -1,6 +1,6 @@
 ﻿namespace QuanLyChoThueNha
 {
-    partial class fThueNha
+    partial class fTraNha
     {
         /// <summary>
         /// Required designer variable.
