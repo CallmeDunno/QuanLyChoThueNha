@@ -16,7 +16,6 @@ namespace QuanLyChoThueNha
         {
             InitializeComponent();
         }
-
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != System.Windows.Forms.DialogResult.OK)

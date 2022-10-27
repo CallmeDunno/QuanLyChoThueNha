@@ -1,6 +1,6 @@
 ﻿namespace QuanLyChoThueNha
 {
-    partial class fThueNha
+    partial class fKhachThue
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // fThueNha
+            // fKhachThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 788);
+            this.ClientSize = new System.Drawing.Size(1000, 562);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.Control;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "fThueNha";
-            this.Text = "fThueNha";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "fKhachThue";
+            this.Text = "Khách Thuê";
             this.ResumeLayout(false);
 
         }

@@ -65,5 +65,19 @@ namespace QuanLyChoThueNha
             }
         }
 
+        private void btnThue_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fThueNha());
+        }
+
+        private void btnXuatFile_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fXuatFile());
+        }
+
+        private void btnKhachThueNha_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fKhachThue());
+        }
     }
 }

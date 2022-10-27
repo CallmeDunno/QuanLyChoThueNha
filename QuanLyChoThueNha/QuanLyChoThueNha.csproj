@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fAboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAboutUs.Designer.cs">
+      <DependentUpon>fAboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDanhMucNha.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fDanhMucNha.Designer.cs">
       <DependentUpon>fDanhMucNha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhachThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhachThue.Designer.cs">
+      <DependentUpon>fKhachThue.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -76,6 +88,12 @@
     <Compile Include="fTimKiem.Designer.cs">
       <DependentUpon>fTimKiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="fXuatFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fXuatFile.Designer.cs">
+      <DependentUpon>fXuatFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashScreen.cs">
@@ -84,8 +102,15 @@
     <Compile Include="SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLConn\ConnectSQL.cs" />
+    <EmbeddedResource Include="fAboutUs.resx">
+      <DependentUpon>fAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDanhMucNha.resx">
       <DependentUpon>fDanhMucNha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhachThue.resx">
+      <DependentUpon>fKhachThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -98,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fTimKiem.resx">
       <DependentUpon>fTimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fXuatFile.resx">
+      <DependentUpon>fXuatFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
