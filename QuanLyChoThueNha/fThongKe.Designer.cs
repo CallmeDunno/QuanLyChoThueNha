@@ -1,6 +1,6 @@
 ﻿namespace QuanLyChoThueNha
 {
-    partial class fXuatFile
+    partial class fThongKe
     {
         /// <summary>
         /// Required designer variable.

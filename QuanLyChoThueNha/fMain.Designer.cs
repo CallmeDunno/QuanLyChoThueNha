@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnKhachThueNha = new System.Windows.Forms.Button();
-            this.btnXuatFile = new System.Windows.Forms.Button();
+            this.btnThongke = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnKhachThueNha);
-            this.panel1.Controls.Add(this.btnXuatFile);
+            this.panel1.Controls.Add(this.btnThongke);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnTraNha);
             this.panel1.Controls.Add(this.btnTimKiem);
@@ -76,16 +76,16 @@
             this.btnKhachThueNha.UseVisualStyleBackColor = true;
             this.btnKhachThueNha.Click += new System.EventHandler(this.btnKhachThueNha_Click);
             // 
-            // btnXuatFile
+            // btnThongke
             // 
-            this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXuatFile.Location = new System.Drawing.Point(0, 336);
-            this.btnXuatFile.Name = "btnXuatFile";
-            this.btnXuatFile.Size = new System.Drawing.Size(200, 50);
-            this.btnXuatFile.TabIndex = 5;
-            this.btnXuatFile.Text = "Thống kê";
-            this.btnXuatFile.UseVisualStyleBackColor = true;
-            this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
+            this.btnThongke.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongke.Location = new System.Drawing.Point(0, 336);
+            this.btnThongke.Name = "btnThongke";
+            this.btnThongke.Size = new System.Drawing.Size(200, 50);
+            this.btnThongke.TabIndex = 5;
+            this.btnThongke.Text = "Thống kê";
+            this.btnThongke.UseVisualStyleBackColor = true;
+            this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
             // panel2
             // 
@@ -244,7 +244,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnXuatFile;
+        private System.Windows.Forms.Button btnThongke;
         private System.Windows.Forms.Button btnKhachThueNha;
     }
 }
