@@ -11,7 +11,7 @@ namespace QuanLyChoThueNha.SQLConn
     internal class ConnectSQL
     {
         //Link của Dũng
-        //private string LinkConnectDB = "Data Source=DUNNO\\SQLEXPRESS;Initial Catalog=QLChoThueNha;Integrated Security=True";
+        private string LinkConnectDB = "Data Source=DUNNO\\SQLEXPRESS;Initial Catalog=QLChoThueNha;Integrated Security=True";
 
         //Link của Quỳnh Anh
         //private string LinkConnectDB = "";
