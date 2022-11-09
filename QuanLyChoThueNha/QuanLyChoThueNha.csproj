@@ -33,8 +33,43 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Syncfusion.Compression.Base, Version=20.3460.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.20.3.0.56\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=20.3460.0.56, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.20.3.0.56\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=20.3460.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.XlsIO.WinForms.20.3.0.56\lib\net46\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,88 +79,156 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fAboutUs.cs">
+    <Compile Include="Form\fAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fAboutUs.Designer.cs">
+    <Compile Include="Form\fAboutUs.Designer.cs">
       <DependentUpon>fAboutUs.cs</DependentUpon>
     </Compile>
-    <Compile Include="fDanhMucNha.cs">
+    <Compile Include="Form\DanhMucNha\fDanhMucNha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDanhMucNha.Designer.cs">
+    <Compile Include="Form\DanhMucNha\fDanhMucNha.Designer.cs">
       <DependentUpon>fDanhMucNha.cs</DependentUpon>
     </Compile>
-    <Compile Include="fKhachThue.cs">
+    <Compile Include="Form\DanhMucNha\fDanhMucNha_Nha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fKhachThue.Designer.cs">
+    <Compile Include="Form\DanhMucNha\fDanhMucNha_Nha.Designer.cs">
+      <DependentUpon>fDanhMucNha_Nha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DanhMucNha\fDanhMucNha_ThemNha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DanhMucNha\fDanhMucNha_ThemNha.Designer.cs">
+      <DependentUpon>fDanhMucNha_ThemNha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\KhachThue\fKhachThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\KhachThue\fKhachThue.Designer.cs">
       <DependentUpon>fKhachThue.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="Form\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="Form\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMain.cs">
+    <Compile Include="Form\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMain.Designer.cs">
+    <Compile Include="Form\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="fTraNha.cs">
+    <Compile Include="Form\fTraNha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fTraNha.Designer.cs">
+    <Compile Include="Form\fTraNha.Designer.cs">
       <DependentUpon>fTraNha.cs</DependentUpon>
     </Compile>
-    <Compile Include="fTimKiem.cs">
+    <Compile Include="Form\fTimKiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fTimKiem.Designer.cs">
+    <Compile Include="Form\fTimKiem.Designer.cs">
       <DependentUpon>fTimKiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="fThongKe.cs">
+    <Compile Include="Form\ThongKe\fThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fThongKe.Designer.cs">
+    <Compile Include="Form\ThongKe\fThongKe.Designer.cs">
       <DependentUpon>fThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DanhMucNha\ThongTinNha.cs" />
+    <Compile Include="Form\DanhMucNha\fThuTienNha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DanhMucNha\fThuTienNha.Designer.cs">
+      <DependentUpon>fThuTienNha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\KhachThue\KhachThue.cs" />
+    <Compile Include="Form\DanhMucNha\fThueNha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DanhMucNha\fThueNha.Designer.cs">
+      <DependentUpon>fThueNha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThongKe\fThongKe_BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongKe\fThongKe_BaoCao.Designer.cs">
+      <DependentUpon>fThongKe_BaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThongKe\fThongKe_Excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongKe\fThongKe_Excel.Designer.cs">
+      <DependentUpon>fThongKe_Excel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThongKe\fThongKe_HopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongKe\fThongKe_HopDong.Designer.cs">
+      <DependentUpon>fThongKe_HopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SplashScreen.cs">
+    <Compile Include="Form\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen.Designer.cs">
+    <Compile Include="Form\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLConn\ConnectSQL.cs" />
-    <EmbeddedResource Include="fAboutUs.resx">
+    <Compile Include="Form\DanhMucNha\TableLoad.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form\fAboutUs.resx">
       <DependentUpon>fAboutUs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDanhMucNha.resx">
+    <EmbeddedResource Include="Form\DanhMucNha\fDanhMucNha.resx">
       <DependentUpon>fDanhMucNha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fKhachThue.resx">
+    <EmbeddedResource Include="Form\DanhMucNha\fDanhMucNha_Nha.resx">
+      <DependentUpon>fDanhMucNha_Nha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DanhMucNha\fDanhMucNha_ThemNha.resx">
+      <DependentUpon>fDanhMucNha_ThemNha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\KhachThue\fKhachThue.resx">
       <DependentUpon>fKhachThue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="Form\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMain.resx">
+    <EmbeddedResource Include="Form\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fTraNha.resx">
+    <EmbeddedResource Include="Form\fTraNha.resx">
       <DependentUpon>fTraNha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fTimKiem.resx">
+    <EmbeddedResource Include="Form\fTimKiem.resx">
       <DependentUpon>fTimKiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fThongKe.resx">
+    <EmbeddedResource Include="Form\ThongKe\fThongKe.resx">
       <DependentUpon>fThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DanhMucNha\fThuTienNha.resx">
+      <DependentUpon>fThuTienNha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DanhMucNha\fThueNha.resx">
+      <DependentUpon>fThueNha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongKe\fThongKe_BaoCao.resx">
+      <DependentUpon>fThongKe_BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongKe\fThongKe_Excel.resx">
+      <DependentUpon>fThongKe_Excel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongKe\fThongKe_HopDong.resx">
+      <DependentUpon>fThongKe_HopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,9 +240,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SplashScreen.resx">
+    <EmbeddedResource Include="Form\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,6 +259,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\C#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Avatar\" />
+    <Folder Include="Resources\iconPng\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

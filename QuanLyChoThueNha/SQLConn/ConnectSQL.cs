@@ -5,22 +5,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace QuanLyChoThueNha.SQLConn
 {
     internal class ConnectSQL
     {
-        //Link của Dũng
         private string LinkConnectDB = "Data Source=DUNNO\\SQLEXPRESS;Initial Catalog=QLChoThueNha;Integrated Security=True";
-
-        //Link của Quỳnh Anh
-        //private string LinkConnectDB = "";
-
-        //Link của Thuận
-        //private string LinkConnectDB = "";
-
-        //Link của Tuấn
-        //private string LinkConnectDB = "";
 
         private SqlConnection connect;
 
@@ -33,6 +24,7 @@ namespace QuanLyChoThueNha.SQLConn
         {
             if (connect.State != System.Data.ConnectionState.Open)
             {
+                connect = new SqlConnection(LinkConnectDB);
                 connect.Open();
             }
         }
@@ -72,11 +64,18 @@ namespace QuanLyChoThueNha.SQLConn
             OpenDB();
             SqlCommand cmd = new SqlCommand(query, connect);
             object obj = (object)cmd.ExecuteScalar();
-            CloseDB();
             return obj;
+            CloseDB();
         }
 
         //ExcuteReader, chắc là dùng khi lấy tên khách các thứ ra để làm hợp đồng
-        //khi ấy thì tính tiếp
+        public SqlDataReader ExecuteRead(string query)
+        {
+            OpenDB();
+            SqlCommand cmd = new SqlCommand(query, connect);
+            SqlDataReader reader = cmd.ExecuteReader();
+            return reader;
+            CloseDB();
+        }
     }
 }
