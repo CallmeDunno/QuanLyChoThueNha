@@ -30,14 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThongKe));
             this.pnContent = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnHD = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBC = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnContent.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnContent
@@ -49,12 +48,21 @@
             this.pnContent.Size = new System.Drawing.Size(1222, 772);
             this.pnContent.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(383, 190);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(341, 289);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.excelToolStripMenuItem,
-            this.mnHD,
             this.mnBC});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -65,33 +73,16 @@
             // excelToolStripMenuItem
             // 
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
-            this.excelToolStripMenuItem.Text = "Excel";
+            this.excelToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+            this.excelToolStripMenuItem.Text = "Tổng tiền theo từng nhà";
             this.excelToolStripMenuItem.Click += new System.EventHandler(this.excelToolStripMenuItem_Click);
-            // 
-            // mnHD
-            // 
-            this.mnHD.Name = "mnHD";
-            this.mnHD.Size = new System.Drawing.Size(91, 24);
-            this.mnHD.Text = "Hợp đồng";
-            this.mnHD.Click += new System.EventHandler(this.mnHD_Click);
             // 
             // mnBC
             // 
             this.mnBC.Name = "mnBC";
-            this.mnBC.Size = new System.Drawing.Size(77, 24);
-            this.mnBC.Text = "Báo cáo";
+            this.mnBC.Size = new System.Drawing.Size(156, 24);
+            this.mnBC.Text = "Tiền nhà từng tháng";
             this.mnBC.Click += new System.EventHandler(this.mnBC_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(383, 190);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(341, 289);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // fThongKe
             // 
@@ -105,9 +96,9 @@
             this.Name = "fThongKe";
             this.Text = "Xuất file";
             this.pnContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,7 +109,6 @@
         private System.Windows.Forms.Panel pnContent;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mnHD;
         private System.Windows.Forms.ToolStripMenuItem mnBC;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

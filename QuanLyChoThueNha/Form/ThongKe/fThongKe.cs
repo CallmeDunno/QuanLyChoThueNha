@@ -39,11 +39,6 @@ namespace QuanLyChoThueNha
             OpenChildFormTK(new fThongKe_Excel());
         }
 
-        private void mnHD_Click(object sender, EventArgs e)
-        {
-            OpenChildFormTK(new fThongKe_HopDong());
-        }
-
         private void mnBC_Click(object sender, EventArgs e)
         {
             OpenChildFormTK(new fThongKe_BaoCao());

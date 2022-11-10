@@ -64,8 +64,8 @@ namespace QuanLyChoThueNha.SQLConn
             OpenDB();
             SqlCommand cmd = new SqlCommand(query, connect);
             object obj = (object)cmd.ExecuteScalar();
-            return obj;
             CloseDB();
+            return obj;
         }
 
         //ExcuteReader, chắc là dùng khi lấy tên khách các thứ ra để làm hợp đồng
@@ -74,8 +74,8 @@ namespace QuanLyChoThueNha.SQLConn
             OpenDB();
             SqlCommand cmd = new SqlCommand(query, connect);
             SqlDataReader reader = cmd.ExecuteReader();
-            return reader;
             CloseDB();
+            return reader;
         }
     }
 }

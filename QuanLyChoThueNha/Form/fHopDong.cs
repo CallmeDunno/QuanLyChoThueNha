@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyChoThueNha
 {
-    public partial class fThongKe_HopDong : Form
+    public partial class fHopDong : Form
     {
-        public fThongKe_HopDong()
+        public fHopDong()
         {
             InitializeComponent();
         }

@@ -269,47 +269,10 @@ namespace QuanLyChoThueNha
                         string strGiaPhong = txtGiaPhong.Text;
                         string strTienDien = txtTienDien.Text;
                         string strTienNuoc = txtTienNuoc.Text;
-                        string strTTT = "";
-                        if (cbTT.SelectedIndex == 0)
-                        {
-                            strTTT = "Đã thuê";
-                        } else
-                        {
-                            strTTT = "Chưa thuê";
-                        }
-                        string strLoaiNha = "";
-                        switch (cbLoaiNha.SelectedIndex)
-                        {
-                            case 0:
-                                strLoaiNha = "Cấp 4";
-                                break;
-                            case 1:
-                                strLoaiNha = "2 tầng";
-                                break;
-                            case 2:
-                                strLoaiNha = "3 tầng";
-                                break;
-                            case 3:
-                                strLoaiNha = "Phòng trọ";
-                                break;
-                            case 4:
-                                strLoaiNha = "Chung cư mini";
-                                break;
-                        }
+                        string strTTT = cbTT.Text;
+                        string strLoaiNha = cbLoaiNha.Text;
                         string strMaLN = (string)con.ExecuteScalar($"select maloai from loainha where tenloai = N'{strLoaiNha}'");
-                        string strDTSD = "";
-                        switch (cbDTSD.SelectedIndex)
-                        {
-                            case 0:
-                                strDTSD = "Sinh viên";
-                                break;
-                            case 1:
-                                strDTSD = "Người lao động";
-                                break;
-                            case 2: 
-                                strDTSD = "Văn phòng";
-                                break;
-                        }
+                        string strDTSD = cbDTSD.Text;
                         string strMaDTSD = (string)con.ExecuteScalar($"select madtsd from doituongsudung where tendtsd = N'{strDTSD}'");
                         string strURL = lbURL.Text.ToString();
 
@@ -369,47 +332,9 @@ namespace QuanLyChoThueNha
                     string strGiaPhong = txtGiaPhong.Text;
                     string strTienDien = txtTienDien.Text;
                     string strTienNuoc = txtTienNuoc.Text;
-                    string strTTT ="";
-                    if (cbTT.SelectedIndex == 0)
-                    {
-                        strTTT = "Đã thuê";
-                    }
-                    else
-                    {
-                        strTTT = "Chưa thuê";
-                    }
-                    string strLoaiNha = "";
-                    switch (cbLoaiNha.SelectedIndex)
-                    {
-                        case 0:
-                            strLoaiNha = "Cấp 4";
-                            break;
-                        case 1:
-                            strLoaiNha = "2 tầng";
-                            break;
-                        case 2:
-                            strLoaiNha = "3 tầng";
-                            break;
-                        case 3:
-                            strLoaiNha = "Phòng trọ";
-                            break;
-                        case 4:
-                            strLoaiNha = "Chung cư mini";
-                            break;
-                    }
-                    string strDTSD = "";
-                    switch (cbDTSD.SelectedIndex)
-                    {
-                        case 0:
-                            strDTSD = "Sinh viên";
-                            break;
-                        case 1:
-                            strDTSD = "Người lao động";
-                            break;
-                        case 2:
-                            strDTSD = "Văn phòng";
-                            break;
-                    }
+                    string strTTT = cbTT.Text;
+                    string strLoaiNha = cbLoaiNha.Text;
+                    string strDTSD = cbDTSD.Text;
                     string strURL = lbURL.Text.ToString();
 
                     int id = (int)btnSua.Tag;
