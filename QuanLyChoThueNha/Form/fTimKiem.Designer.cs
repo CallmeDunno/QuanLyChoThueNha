@@ -103,8 +103,8 @@
             // 
             this.dgvTimNha.AllowUserToAddRows = false;
             this.dgvTimNha.AllowUserToDeleteRows = false;
-            this.dgvTimNha.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dgvTimNha.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvTimNha.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTimNha.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTimNha.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTimNha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTimNha.Location = new System.Drawing.Point(0, 0);
@@ -189,13 +189,14 @@
             // 
             this.dgvTimKhach.AllowUserToAddRows = false;
             this.dgvTimKhach.AllowUserToDeleteRows = false;
-            this.dgvTimKhach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvTimKhach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTimKhach.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTimKhach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTimKhach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTimKhach.Location = new System.Drawing.Point(0, 0);
             this.dgvTimKhach.Name = "dgvTimKhach";
             this.dgvTimKhach.ReadOnly = true;
-            this.dgvTimKhach.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvTimKhach.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.dgvTimKhach.RowTemplate.Height = 24;
             this.dgvTimKhach.ShowEditingIcon = false;
             this.dgvTimKhach.Size = new System.Drawing.Size(1222, 566);
@@ -240,7 +241,6 @@
             this.cbTim2.Name = "cbTim2";
             this.cbTim2.Size = new System.Drawing.Size(280, 33);
             this.cbTim2.TabIndex = 6;
-            this.cbTim2.SelectedIndexChanged += new System.EventHandler(this.cbTim2_SelectedIndexChanged);
             // 
             // label2
             // 

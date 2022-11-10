@@ -99,7 +99,8 @@ namespace QuanLyChoThueNha
 
         private void btnThuTienNha_Click(object sender, EventArgs e)
         {
-
+            int id = int.Parse(txtMaNha.Text);
+            new fDanhMucNha_TaiSan(id).ShowDialog();
         }
     }
 }

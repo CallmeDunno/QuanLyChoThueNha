@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThue = new System.Windows.Forms.Button();
+            this.btnTaiSan = new System.Windows.Forms.Button();
             this.btnThuTienNha = new System.Windows.Forms.Button();
             this.picture = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtMaNha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTaiSan = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -127,9 +127,20 @@
             this.btnThue.Visible = false;
             this.btnThue.Click += new System.EventHandler(this.btnThue_Click);
             // 
+            // btnTaiSan
+            // 
+            this.btnTaiSan.Location = new System.Drawing.Point(758, 714);
+            this.btnTaiSan.Name = "btnTaiSan";
+            this.btnTaiSan.Size = new System.Drawing.Size(125, 47);
+            this.btnTaiSan.TabIndex = 4;
+            this.btnTaiSan.Text = "Tài sản";
+            this.btnTaiSan.UseVisualStyleBackColor = true;
+            this.btnTaiSan.Visible = false;
+            this.btnTaiSan.Click += new System.EventHandler(this.btnThuTienNha_Click);
+            // 
             // btnThuTienNha
             // 
-            this.btnThuTienNha.Location = new System.Drawing.Point(923, 714);
+            this.btnThuTienNha.Location = new System.Drawing.Point(905, 714);
             this.btnThuTienNha.Name = "btnThuTienNha";
             this.btnThuTienNha.Size = new System.Drawing.Size(130, 47);
             this.btnThuTienNha.TabIndex = 4;
@@ -349,17 +360,6 @@
             this.label1.Size = new System.Drawing.Size(84, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhà:";
-            // 
-            // btnTaiSan
-            // 
-            this.btnTaiSan.Location = new System.Drawing.Point(773, 714);
-            this.btnTaiSan.Name = "btnTaiSan";
-            this.btnTaiSan.Size = new System.Drawing.Size(125, 47);
-            this.btnTaiSan.TabIndex = 4;
-            this.btnTaiSan.Text = "Tài sản";
-            this.btnTaiSan.UseVisualStyleBackColor = true;
-            this.btnTaiSan.Visible = false;
-            this.btnTaiSan.Click += new System.EventHandler(this.btnThuTienNha_Click);
             // 
             // fDanhMucNha_Nha
             // 

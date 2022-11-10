@@ -20,7 +20,7 @@ namespace QuanLyChoThueNha
             InitializeComponent();
             conn = new ConnectSQL();
         }
-
+        #region Function
         private void AddDataComboBox1()
         {
             cbTim1.Items.Add("Loại nhà");
@@ -49,6 +49,25 @@ namespace QuanLyChoThueNha
             }
             return true;    
         }
+
+        private bool CheckTimKhach()
+        {
+            if (cbTim2.SelectedIndex == -1)
+            {
+                MessageBox.Show("Bạn phải chọn phương thức tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (txtTim2.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập thông tin tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        #endregion
+
+        #region Event
         private void btnTimNha_Click(object sender, EventArgs e)
         {
             if (CheckTimNha())
@@ -150,20 +169,6 @@ namespace QuanLyChoThueNha
             }
         }
 
-        private bool CheckTimKhach()
-        {
-            if(cbTim2.SelectedIndex == -1)
-            {
-                MessageBox.Show("Bạn phải chọn phương thức tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if(txtTim2.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập thông tin tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            return true;
-        }
         private void btnTimKhach_Click(object sender, EventArgs e)
         {
             if (CheckTimKhach())
@@ -214,9 +219,7 @@ namespace QuanLyChoThueNha
 
         }
 
-        private void cbTim2_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        #endregion
 
-        }
     }
 }

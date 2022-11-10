@@ -9,26 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QuanLyChoThueNha
 {
     public partial class fTraNha : Form
     {
+        private ConnectSQL connect;
         public fTraNha()
         {
+            connect = new ConnectSQL();
             InitializeComponent();
         }
 
-        ConnectSQL connect = new ConnectSQL();
-
-        private void fTraNha_Load(object sender, EventArgs e)
-        {
-            dgvDsNhaChuaTra.DataSource = connect.SelectData("Select * from TraNha");
-            state_groupbox(false); 
-            loadDataComboBox();
-        }
-
+        #region Function
         private void state_groupbox(bool type)
         {
             grbTraNha.Enabled = type;
@@ -109,6 +102,15 @@ namespace QuanLyChoThueNha
                 cmbMaTaiSan.Items.Add(dataTable.Rows[i]["MaTaiSan"].ToString());
             }
         }
+        #endregion
+
+        #region Event
+        private void fTraNha_Load(object sender, EventArgs e)
+        {
+            dgvDsNhaChuaTra.DataSource = connect.SelectData("Select * from TraNha");
+            state_groupbox(false);
+            loadDataComboBox();
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -141,66 +143,6 @@ namespace QuanLyChoThueNha
             btnLuuMatTaiSan.Text = "Xóa";
             btnLuuTraNha.Text = "Xóa";
             MessageBox.Show("Mời bạn chọn xóa thông tin trả nhà hoặc thông tin mất tài sản");
-        }
-
-        private void btnXuatExcel_Click(object sender, EventArgs e)
-        {
-            Excel.Application exApp = new Excel.Application();
-            Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
-            Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
-            Excel.Range tenTruong = (Excel.Range)exSheet.Cells[1, 1];
-            //exSheet.get_Range("B3:C4").Font.Bold = true;
-            //exSheet.get_Range("B3").Value = "Danh sach chat lieu";
-            //exSheet.get_Range("A4").Value = "STT";
-            //exSheet.get_Range("B4").Value = "MaChatLieu";
-            //exSheet.get_Range("C4").Value = "TenChatLieu";
-            //int n = dataGridView1.Rows.Count;
-            //for (int i = 0; i < n; i++)
-            //{
-            //    exSheet.get_Range("A" + (i + 5).ToString()).Value =
-            //        (i + 1);
-            //    exSheet.get_Range("B" + (i + 5).ToString()).Value =
-            //        dataGridView1.Rows[i].Cells[0].Value;
-            //    exSheet.get_Range("C" + (i + 5).ToString()).Value =
-            //        dataGridView1.Rows[i].Cells[1].Value;
-            //}
-            exBook.Activate();
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Excel|*.xls|Excel 2010|*.xlsx|All files(*.*)|*.*";
-            saveFileDialog.InitialDirectory = "C:\\Users\\LENOVO\\Desktop\\Demo_CommonDialog";
-            saveFileDialog.FilterIndex = 2;
-            saveFileDialog.Title = "Chọn File để lưu";
-            saveFileDialog.AddExtension = true;
-            saveFileDialog.DefaultExt = ".xlxs";
-            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                try
-                {
-                    exBook.SaveAs(saveFileDialog.FileName.ToString());
-                    exApp.Quit();
-                    MessageBox.Show("Xuất file excel thành công!");
-                }
-                catch
-                {
-                    MessageBox.Show("Xuất file excel thất bại!");
-                }
-            }
-            else
-                MessageBox.Show("you click Cancle");       
-        }
-
-        private void btnReport_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Xác nhận thoát", "Thông báo",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk) == DialogResult.OK)
-            {
-                this.Close();
-            }
         }
 
         private void dgvDsNhaChuaTra_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -453,5 +395,6 @@ namespace QuanLyChoThueNha
             if (e.KeyChar == '.' && txtTongTien.Text.Contains("."))
                 e.Handled = true;
         }
+        #endregion
     }
 }
