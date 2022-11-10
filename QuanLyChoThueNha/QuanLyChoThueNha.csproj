@@ -82,6 +82,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\DanhMucNha\fTraNha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DanhMucNha\fTraNha.designer.cs">
+      <DependentUpon>fTraNha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\fHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,12 +135,6 @@
     </Compile>
     <Compile Include="Form\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fTraNha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fTraNha.Designer.cs">
-      <DependentUpon>fTraNha.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\fTimKiem.cs">
       <SubType>Form</SubType>
@@ -185,6 +185,9 @@
     <Compile Include="SQLConn\ConnectSQL.cs" />
     <Compile Include="Form\DanhMucNha\TableLoad.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form\DanhMucNha\fTraNha.resx">
+      <DependentUpon>fTraNha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\fAboutUs.resx">
       <DependentUpon>fAboutUs.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,9 +211,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fTraNha.resx">
-      <DependentUpon>fTraNha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\fTimKiem.resx">
       <DependentUpon>fTimKiem.cs</DependentUpon>

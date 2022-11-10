@@ -211,9 +211,8 @@
             this.lbURL.AutoSize = true;
             this.lbURL.Location = new System.Drawing.Point(870, 178);
             this.lbURL.Name = "lbURL";
-            this.lbURL.Size = new System.Drawing.Size(41, 25);
+            this.lbURL.Size = new System.Drawing.Size(0, 25);
             this.lbURL.TabIndex = 10;
-            this.lbURL.Text = "link";
             this.lbURL.Visible = false;
             // 
             // pic

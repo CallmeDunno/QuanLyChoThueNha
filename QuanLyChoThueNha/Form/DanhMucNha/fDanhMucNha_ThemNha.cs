@@ -88,42 +88,52 @@ namespace QuanLyChoThueNha
         {
             if (txtTenChuNha.Text.Trim().Length == 0)
             {
+                MessageBox.Show("Không được để trống tên chủ nhà!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!Regex.IsMatch(txtSDT.Text.Trim(), "[0-9]{10}"))
             {
+                MessageBox.Show("Nhập sai định dạng hoặc không đủ 10 chữ số của số điện thoại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtDiaChi.Text.Trim().Length == 0)
             {
+                MessageBox.Show("Không được để trống địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtGiaPhong.Text.Trim().Length == 0)
             {
+                MessageBox.Show("Không được để trống giá phòng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtTienDien.Text.Trim().Length == 0)
             {
+                MessageBox.Show("Không được để trống tiền điện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtTienNuoc.Text.Trim().Length == 0)
             {
+                MessageBox.Show("Không được để trống tiền nước!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (cbTT.SelectedIndex == -1)
             {
+                MessageBox.Show("Chưa chọn tình trạng nhà!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (cbLoaiNha.SelectedIndex == -1)
             {
+                MessageBox.Show("Chưa chọn loại nhà!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (cbDTSD.SelectedIndex == -1)
             {
+                MessageBox.Show("Chưa chọn đối tượng sử dụng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (lbURL.Text.Trim().Length == 0)
             {
+                MessageBox.Show("Chưa chọn ảnh!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -291,12 +301,6 @@ namespace QuanLyChoThueNha
                         MessageBox.Show("Đã thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearInput();
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Bạn đã nhập thiếu thông tin hoặc sai định" +
-                        " dạng thông tin hoặc chưa chọn ảnh, vui lòng nhập lại!",
-                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             if (btnXoa.Enabled)

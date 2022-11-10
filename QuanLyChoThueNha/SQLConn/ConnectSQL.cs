@@ -13,6 +13,10 @@ namespace QuanLyChoThueNha.SQLConn
     {
         private string LinkConnectDB = "Data Source=DUNNO\\SQLEXPRESS;Initial Catalog=QLChoThueNha;Integrated Security=True";
 
+        //link cua QA
+        //private string LinkConnectDB = "Data Source=LAPTOP-LEDRJD7A\\SQLEXPRESS;Initial Catalog=QLChoThueNha;Integrated Security=True";
+
+
         private SqlConnection connect;
 
         public ConnectSQL()
