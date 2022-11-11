@@ -50,6 +50,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.lbMaSoThue = new System.Windows.Forms.Label();
             this.lb10 = new System.Windows.Forms.Label();
             this.btnHopDong = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.txtTim = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnLamMoi = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -106,6 +106,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(142, 36);
@@ -116,50 +117,56 @@
             // 
             // btnXacNhan
             // 
+            this.btnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXacNhan.Location = new System.Drawing.Point(173, 645);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(127, 41);
-            this.btnXacNhan.TabIndex = 4;
+            this.btnXacNhan.TabIndex = 8;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // dtpNgayKT
             // 
+            this.dtpNgayKT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayKT.Location = new System.Drawing.Point(228, 489);
             this.dtpNgayKT.Name = "dtpNgayKT";
             this.dtpNgayKT.Size = new System.Drawing.Size(239, 30);
-            this.dtpNgayKT.TabIndex = 3;
+            this.dtpNgayKT.TabIndex = 6;
             // 
             // dtpNgayBD
             // 
+            this.dtpNgayBD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayBD.Location = new System.Drawing.Point(228, 415);
             this.dtpNgayBD.Name = "dtpNgayBD";
             this.dtpNgayBD.Size = new System.Drawing.Size(239, 30);
-            this.dtpNgayBD.TabIndex = 3;
+            this.dtpNgayBD.TabIndex = 5;
             // 
             // cbHTTT
             // 
+            this.cbHTTT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbHTTT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHTTT.FormattingEnabled = true;
             this.cbHTTT.Location = new System.Drawing.Point(228, 339);
             this.cbHTTT.Name = "cbHTTT";
             this.cbHTTT.Size = new System.Drawing.Size(239, 33);
-            this.cbHTTT.TabIndex = 2;
+            this.cbHTTT.TabIndex = 4;
             // 
             // cbMDSD
             // 
+            this.cbMDSD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbMDSD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMDSD.FormattingEnabled = true;
             this.cbMDSD.Location = new System.Drawing.Point(228, 265);
             this.cbMDSD.Name = "cbMDSD";
             this.cbMDSD.Size = new System.Drawing.Size(239, 33);
-            this.cbMDSD.TabIndex = 2;
+            this.cbMDSD.TabIndex = 3;
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(25, 562);
             this.label8.Name = "label8";
@@ -169,6 +176,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(25, 489);
             this.label6.Name = "label6";
@@ -178,6 +186,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(25, 415);
             this.label5.Name = "label5";
@@ -187,6 +196,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(25, 339);
             this.label4.Name = "label4";
@@ -196,6 +206,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 265);
             this.label3.Name = "label3";
@@ -205,6 +216,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 190);
             this.label2.Name = "label2";
@@ -214,6 +226,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 121);
             this.label1.Name = "label1";
@@ -223,13 +236,15 @@
             // 
             // txtTienCoc
             // 
+            this.txtTienCoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTienCoc.Location = new System.Drawing.Point(228, 562);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.Size = new System.Drawing.Size(239, 30);
-            this.txtTienCoc.TabIndex = 0;
+            this.txtTienCoc.TabIndex = 7;
             // 
             // txtMaKhach
             // 
+            this.txtMaKhach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMaKhach.Enabled = false;
             this.txtMaKhach.Location = new System.Drawing.Point(228, 190);
             this.txtMaKhach.Name = "txtMaKhach";
@@ -238,6 +253,7 @@
             // 
             // txtMaNha
             // 
+            this.txtMaNha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMaNha.Enabled = false;
             this.txtMaNha.Location = new System.Drawing.Point(228, 121);
             this.txtMaNha.Name = "txtMaNha";
@@ -281,6 +297,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách thuê nhà";
             // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLamMoi.Location = new System.Drawing.Point(11, 422);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(112, 36);
+            this.btnLamMoi.TabIndex = 9;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
             // lbMaSoThue
             // 
             this.lbMaSoThue.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -306,7 +333,7 @@
             this.btnHopDong.Location = new System.Drawing.Point(621, 422);
             this.btnHopDong.Name = "btnHopDong";
             this.btnHopDong.Size = new System.Drawing.Size(120, 36);
-            this.btnHopDong.TabIndex = 1;
+            this.btnHopDong.TabIndex = 12;
             this.btnHopDong.Text = "Hợp đồng";
             this.btnHopDong.UseVisualStyleBackColor = true;
             this.btnHopDong.Click += new System.EventHandler(this.btnHopDong_Click);
@@ -317,7 +344,7 @@
             this.btnSua.Location = new System.Drawing.Point(352, 422);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(116, 36);
-            this.btnSua.TabIndex = 1;
+            this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -328,7 +355,7 @@
             this.btnXoa.Location = new System.Drawing.Point(487, 422);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(116, 36);
-            this.btnXoa.TabIndex = 1;
+            this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -428,6 +455,7 @@
             // 
             // btnTim
             // 
+            this.btnTim.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTim.Location = new System.Drawing.Point(558, 13);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(126, 29);
@@ -438,30 +466,22 @@
             // 
             // txtTim
             // 
+            this.txtTim.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTim.Location = new System.Drawing.Point(245, 12);
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(274, 30);
-            this.txtTim.TabIndex = 0;
+            this.txtTim.TabIndex = 1;
             this.toolTip1.SetToolTip(this.txtTim, "Tìm kiếm theo tên khách thuê");
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(41, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(198, 25);
             this.label7.TabIndex = 1;
             this.label7.Text = "Tìm kiếm khách thuê:";
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(11, 422);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(112, 36);
-            this.btnLamMoi.TabIndex = 4;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // fThueNha
             // 

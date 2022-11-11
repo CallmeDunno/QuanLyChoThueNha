@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QuanLyChoThueNha
 {
@@ -95,6 +96,32 @@ namespace QuanLyChoThueNha
 
             cbHTTT.Items.Add("Chuyển khoản");
             cbHTTT.Items.Add("Tiền mặt");
+
+            string query = $"select makhach as N'Mã khách', TenKhach as N'Tên khách', GioiTinh as N'Giới tính', " +
+                $"SoDienThoai as N'Số điện thoại', SoCMND as N'Số CMND', DiaChiThuongTru as N'Địa chỉ thường trú' " +
+                $"from KhachThue";
+            using (SqlDataReader read = con.ExecuteRead(query))
+            {
+                if (read != null)
+                {
+                    while (read.Read())
+                    {
+                        ListViewItem item = new ListViewItem();
+                        item.Text = read["Mã khách"].ToString();
+                        item.SubItems.Add(read["Tên khách"].ToString());
+                        item.SubItems.Add(read["Giới tính"].ToString());
+                        item.SubItems.Add(read["Số điện thoại"].ToString());
+                        item.SubItems.Add(read["Số CMND"].ToString());
+                        item.SubItems.Add(read["Địa chỉ thường trú"].ToString());
+                        listViewKhach.Items.Add(item);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không có thông tin khách thuê nhà.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                read.Close();
+            }
 
             StateButton(false);
             LoadThueNha();

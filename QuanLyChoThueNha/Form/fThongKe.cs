@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace QuanLyChoThueNha
 {
-    public partial class fThongKe_TienNhaTungThang : Form
+    public partial class fThongKe : Form
     {
-        public fThongKe_TienNhaTungThang()
+        private Form currFormTK;
+        public fThongKe()
         {
             InitializeComponent();
         }
+
+        
     }
 }

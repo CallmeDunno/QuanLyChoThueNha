@@ -118,7 +118,8 @@
             // 
             // btnThue
             // 
-            this.btnThue.Location = new System.Drawing.Point(778, 714);
+            this.btnThue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThue.Location = new System.Drawing.Point(789, 714);
             this.btnThue.Name = "btnThue";
             this.btnThue.Size = new System.Drawing.Size(110, 47);
             this.btnThue.TabIndex = 4;
@@ -129,6 +130,7 @@
             // 
             // btnTaiSan
             // 
+            this.btnTaiSan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTaiSan.Location = new System.Drawing.Point(578, 714);
             this.btnTaiSan.Name = "btnTaiSan";
             this.btnTaiSan.Size = new System.Drawing.Size(125, 47);
@@ -139,6 +141,7 @@
             // 
             // btnThuTienNha
             // 
+            this.btnThuTienNha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThuTienNha.Location = new System.Drawing.Point(905, 714);
             this.btnThuTienNha.Name = "btnThuTienNha";
             this.btnThuTienNha.Size = new System.Drawing.Size(130, 47);
