@@ -32,8 +32,8 @@
             this.pnContent = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnBC = new System.Windows.Forms.ToolStripMenuItem();
+            this.excelTienTungNhaTrongThang = new System.Windows.Forms.ToolStripMenuItem();
+            this.excelTongTienNhaCacThang = new System.Windows.Forms.ToolStripMenuItem();
             this.pnContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -62,27 +62,27 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.excelToolStripMenuItem,
-            this.mnBC});
+            this.excelTienTungNhaTrongThang,
+            this.excelTongTienNhaCacThang});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1222, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // excelToolStripMenuItem
+            // excelTienTungNhaTrongThang
             // 
-            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
-            this.excelToolStripMenuItem.Text = "Tổng tiền theo từng nhà";
-            this.excelToolStripMenuItem.Click += new System.EventHandler(this.excelToolStripMenuItem_Click);
+            this.excelTienTungNhaTrongThang.Name = "excelTienTungNhaTrongThang";
+            this.excelTienTungNhaTrongThang.Size = new System.Drawing.Size(237, 24);
+            this.excelTienTungNhaTrongThang.Text = "Tiền nhà từng nhà tháng hiện tại";
+            this.excelTienTungNhaTrongThang.Click += new System.EventHandler(this.excelTienTungNhaTrongThang_Click);
             // 
-            // mnBC
+            // excelTongTienNhaCacThang
             // 
-            this.mnBC.Name = "mnBC";
-            this.mnBC.Size = new System.Drawing.Size(156, 24);
-            this.mnBC.Text = "Tiền nhà từng tháng";
-            this.mnBC.Click += new System.EventHandler(this.mnBC_Click);
+            this.excelTongTienNhaCacThang.Name = "excelTongTienNhaCacThang";
+            this.excelTongTienNhaCacThang.Size = new System.Drawing.Size(156, 24);
+            this.excelTongTienNhaCacThang.Text = "Tiền nhà từng tháng";
+            this.excelTongTienNhaCacThang.Click += new System.EventHandler(this.excelTongTienNhaCacThang_Click);
             // 
             // fThongKe
             // 
@@ -108,8 +108,8 @@
 
         private System.Windows.Forms.Panel pnContent;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mnBC;
+        private System.Windows.Forms.ToolStripMenuItem excelTienTungNhaTrongThang;
+        private System.Windows.Forms.ToolStripMenuItem excelTongTienNhaCacThang;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

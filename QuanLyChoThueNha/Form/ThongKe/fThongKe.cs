@@ -34,14 +34,14 @@ namespace QuanLyChoThueNha
             child.Show();
         }
 
-        private void excelToolStripMenuItem_Click(object sender, EventArgs e)
+        private void excelTienTungNhaTrongThang_Click(object sender, EventArgs e)
         {
-            OpenChildFormTK(new fThongKe_Excel());
+            OpenChildFormTK(new fThongKe_TienNhaTungNhaThangHT());
         }
 
-        private void mnBC_Click(object sender, EventArgs e)
+        private void excelTongTienNhaCacThang_Click(object sender, EventArgs e)
         {
-            OpenChildFormTK(new fThongKe_BaoCao());
+            OpenChildFormTK(new fThongKe_TienNhaTungThang());
         }
     }
 }

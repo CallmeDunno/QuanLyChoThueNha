@@ -23,6 +23,7 @@ namespace QuanLyChoThueNha
 
         private void LoadTable()
         {
+            flpDMN_Nha.Controls.Clear();
             TableLoad tableLoad = new TableLoad();
             List<ThongTinNha> list = tableLoad.LoadThongTinNha();
             foreach (ThongTinNha thongTinNha in list)
@@ -89,18 +90,25 @@ namespace QuanLyChoThueNha
             }
         }
 
-        #endregion
-
         private void btnThue_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtMaNha.Text);
             new fThueNha(id).ShowDialog();
+            LoadTable();
         }
 
         private void btnThuTienNha_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtMaNha.Text);
+            new fThuTienNha(id).ShowDialog();
+        }
+
+        private void btnTaiSan_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtMaNha.Text);
             new fDanhMucNha_TaiSan(id).ShowDialog();
         }
+
+        #endregion
     }
 }

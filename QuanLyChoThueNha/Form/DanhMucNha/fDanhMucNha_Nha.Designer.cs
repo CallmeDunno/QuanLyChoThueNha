@@ -136,7 +136,7 @@
             this.btnTaiSan.Text = "Tài sản";
             this.btnTaiSan.UseVisualStyleBackColor = true;
             this.btnTaiSan.Visible = false;
-            this.btnTaiSan.Click += new System.EventHandler(this.btnThuTienNha_Click);
+            this.btnTaiSan.Click += new System.EventHandler(this.btnTaiSan_Click);
             // 
             // btnThuTienNha
             // 

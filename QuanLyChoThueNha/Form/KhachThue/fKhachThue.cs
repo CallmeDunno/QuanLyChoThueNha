@@ -109,7 +109,9 @@ namespace QuanLyChoThueNha
         private void fKhachThue_Load(object sender, EventArgs e)
         {
             conn = new ConnectSQL();
-            dgvKhach.DataSource = conn.SelectData("select * from KhachThue");
+            dgvKhach.DataSource = conn.SelectData("select MaKhach as N'Mã khách', TenKhach as N'Tên khách'" +
+                ", NgaySinh as N'Ngày sinh', SoDienThoai as N'Số điện thoại', GioiTinh as N'Giới tính', " +
+                "SoCMND as N'Số CMND', DiaChiThuongTru as N'Địa chỉ thường trú', NgheNghiep as N'Nghề nghiệp' from KhachThue");
         }
 
         private void btnThem_Click(object sender, EventArgs e)

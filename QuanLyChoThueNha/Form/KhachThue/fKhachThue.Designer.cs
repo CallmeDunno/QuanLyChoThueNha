@@ -357,7 +357,8 @@
             // 
             this.dgvKhach.AllowUserToAddRows = false;
             this.dgvKhach.AllowUserToDeleteRows = false;
-            this.dgvKhach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvKhach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKhach.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvKhach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKhach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhach.Dock = System.Windows.Forms.DockStyle.Fill;

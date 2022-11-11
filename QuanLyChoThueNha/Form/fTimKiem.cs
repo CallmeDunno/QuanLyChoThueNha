@@ -6,9 +6,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QuanLyChoThueNha
 {
@@ -126,45 +128,27 @@ namespace QuanLyChoThueNha
             {
                 case 0:
                     cbTim1_1.Items.Clear();
-                    cbTim1_1.Items.Add("Cấp 4");
-                    cbTim1_1.Items.Add("2 tầng");
-                    cbTim1_1.Items.Add("3 tầng");
-                    cbTim1_1.Items.Add("Phòng trọ");
-                    cbTim1_1.Items.Add("Chung cư mini");
+                    DataTable dataTable = conn.SelectData("select TenLoai from LoaiNha");
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        cbTim1_1.Items.Add(dataTable.Rows[i]["TenLoai"].ToString());
+                    }
                     break;
                 case 1:
                     cbTim1_1.Items.Clear();
-                    cbTim1_1.Items.Add("Sinh viên");
-                    cbTim1_1.Items.Add("Người lao động");
-                    cbTim1_1.Items.Add("Hộ gia đình");
-                    cbTim1_1.Items.Add("Nhân viên văn phòng");
-                    cbTim1_1.Items.Add("Học sinh");
+                    DataTable dataTable1 = conn.SelectData("select TenDTSD from DoiTuongSuDung");
+                    for (int i = 0; i < dataTable1.Rows.Count; i++)
+                    {
+                        cbTim1_1.Items.Add(dataTable1.Rows[i]["TenDTSD"].ToString());
+                    }
                     break;
                 case 2:
                     cbTim1_1.Items.Clear();
-                    cbTim1_1.Items.Add("Ba Đình");
-                    cbTim1_1.Items.Add("Bắc Từ Liêm");
-                    cbTim1_1.Items.Add("Cầu Giấy");
-                    cbTim1_1.Items.Add("Đống Đa");
-                    cbTim1_1.Items.Add("Hà Đông");
-                    cbTim1_1.Items.Add("Thanh Xuân");
-                    cbTim1_1.Items.Add("Hai Bà Trưng");
-                    cbTim1_1.Items.Add("Hoàn Kiếm");
-                    cbTim1_1.Items.Add("Nam Từ Liêm");
-                    cbTim1_1.Items.Add("Hoàng Mai");
-                    cbTim1_1.Items.Add("Long Biên");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
-                    cbTim1_1.Items.Add("");
+                    DataTable dataTable2 = conn.SelectData("select DiaChi from DanhMucNha");
+                    for (int i = 0; i < dataTable2.Rows.Count; i++)
+                    {
+                        cbTim1_1.Items.Add(dataTable2.Rows[i]["DiaChi"].ToString());
+                    }
                     break;
             }
         }

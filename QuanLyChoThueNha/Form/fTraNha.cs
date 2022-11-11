@@ -195,7 +195,7 @@ namespace QuanLyChoThueNha
             {
                 if (checkTraNha())
                 {
-                    string query = $"update  TraNha set NgayTra = '{dtpNgayTra.Value.ToString("yyyy-MM-dd")}', Tongtien = '{txtTongTien.Text}' where MaSoThue = '{txtMaSoThue.Text.Trim()}'";
+                    string query = $"update TraNha set NgayTra = '{dtpNgayTra.Value.ToString("yyyy-MM-dd")}', Tongtien = '{txtTongTien.Text}' where MaSoThue = '{txtMaSoThue.Text.Trim()}'";
                     try
                     {
                         connect.ExecuteIUDQuery(query);
@@ -221,11 +221,10 @@ namespace QuanLyChoThueNha
                     txtMaSoThue.Focus();
                     return;
                 }
-                string query1 = $"delete from TraNha_MatTaiSan where MaSothue = '{txtMaSoThue.Text.Trim()}'";
+                
                 string query2 = $"delete from TraNha where MaSothue = '{txtMaSoThue.Text.Trim()}'";
                 try
                 {
-                    connect.ExecuteIUDQuery(query1);
                     connect.ExecuteIUDQuery(query2);
                     MessageBox.Show("Xóa thông tin thành công!");
                     dgvDsNhaChuaTra.DataSource = connect.SelectData("Select * from TraNha");

@@ -94,9 +94,9 @@
             // 
             this.panel3.Controls.Add(this.dgvTimNha);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 103);
+            this.panel3.Location = new System.Drawing.Point(3, 97);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1222, 566);
+            this.panel3.Size = new System.Drawing.Size(1222, 572);
             this.panel3.TabIndex = 1;
             // 
             // dgvTimNha
@@ -111,7 +111,8 @@
             this.dgvTimNha.Name = "dgvTimNha";
             this.dgvTimNha.RowHeadersWidth = 51;
             this.dgvTimNha.RowTemplate.Height = 24;
-            this.dgvTimNha.Size = new System.Drawing.Size(1222, 566);
+            this.dgvTimNha.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvTimNha.Size = new System.Drawing.Size(1222, 572);
             this.dgvTimNha.TabIndex = 0;
             // 
             // panel2
@@ -123,21 +124,21 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1222, 100);
+            this.panel2.Size = new System.Drawing.Size(1222, 94);
             this.panel2.TabIndex = 0;
             // 
             // cbTim1_1
             // 
             this.cbTim1_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTim1_1.FormattingEnabled = true;
-            this.cbTim1_1.Location = new System.Drawing.Point(615, 35);
+            this.cbTim1_1.Location = new System.Drawing.Point(514, 25);
             this.cbTim1_1.Name = "cbTim1_1";
             this.cbTim1_1.Size = new System.Drawing.Size(280, 33);
             this.cbTim1_1.TabIndex = 3;
             // 
             // btnTimNha
             // 
-            this.btnTimNha.Location = new System.Drawing.Point(1000, 29);
+            this.btnTimNha.Location = new System.Drawing.Point(848, 19);
             this.btnTimNha.Name = "btnTimNha";
             this.btnTimNha.Size = new System.Drawing.Size(125, 45);
             this.btnTimNha.TabIndex = 4;
@@ -149,7 +150,7 @@
             // 
             this.cbTim1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTim1.FormattingEnabled = true;
-            this.cbTim1.Location = new System.Drawing.Point(210, 35);
+            this.cbTim1.Location = new System.Drawing.Point(183, 26);
             this.cbTim1.Name = "cbTim1";
             this.cbTim1.Size = new System.Drawing.Size(280, 33);
             this.cbTim1.TabIndex = 2;
@@ -158,7 +159,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 35);
+            this.label1.Location = new System.Drawing.Point(13, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 25);
             this.label1.TabIndex = 0;

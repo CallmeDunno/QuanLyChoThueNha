@@ -12,9 +12,14 @@ namespace QuanLyChoThueNha
 {
     public partial class fHopDong : Form
     {
-        public fHopDong()
+        private int masothue;
+        public fHopDong(int masothue)
         {
+            this.masothue = masothue;
             InitializeComponent();
         }
+
+        
+
     }
 }
