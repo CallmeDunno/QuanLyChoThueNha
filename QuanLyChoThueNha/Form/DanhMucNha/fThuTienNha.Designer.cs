@@ -35,6 +35,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbMaSoThu = new System.Windows.Forms.Label();
             this.dtpNgayThu = new System.Windows.Forms.DateTimePicker();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvThuTien = new System.Windows.Forms.DataGridView();
-            this.lbMaSoThu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -138,6 +138,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết thu tiền nhà";
+            // 
+            // lbMaSoThu
+            // 
+            this.lbMaSoThu.AutoSize = true;
+            this.lbMaSoThu.Location = new System.Drawing.Point(175, 672);
+            this.lbMaSoThu.Name = "lbMaSoThu";
+            this.lbMaSoThu.Size = new System.Drawing.Size(0, 25);
+            this.lbMaSoThu.TabIndex = 3;
+            this.lbMaSoThu.Visible = false;
             // 
             // dtpNgayThu
             // 
@@ -256,16 +265,6 @@
             this.dgvThuTien.Size = new System.Drawing.Size(725, 770);
             this.dgvThuTien.TabIndex = 0;
             this.dgvThuTien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuTien_CellClick);
-            // 
-            // lbMaSoThu
-            // 
-            this.lbMaSoThu.AutoSize = true;
-            this.lbMaSoThu.Location = new System.Drawing.Point(175, 672);
-            this.lbMaSoThu.Name = "lbMaSoThu";
-            this.lbMaSoThu.Size = new System.Drawing.Size(23, 25);
-            this.lbMaSoThu.TabIndex = 3;
-            this.lbMaSoThu.Text = "a";
-            this.lbMaSoThu.Visible = false;
             // 
             // fThuTienNha
             // 

@@ -74,8 +74,6 @@ namespace QuanLyChoThueNha
                 btnThue.Enabled = false;
                 btnThue.Visible = false;
 
-                btnTaiSan.Enabled = true;
-                btnTaiSan.Visible = true;
                 btnThuTienNha.Enabled = true;
                 btnThuTienNha.Visible = true;
             } else
@@ -83,8 +81,6 @@ namespace QuanLyChoThueNha
                 btnThue.Enabled = true;
                 btnThue.Visible = true;
 
-                btnTaiSan.Visible = false;
-                btnTaiSan.Enabled = false;
                 btnThuTienNha.Enabled = false;
                 btnThuTienNha.Visible = false;
             }

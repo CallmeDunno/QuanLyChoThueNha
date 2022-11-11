@@ -85,6 +85,7 @@ namespace QuanLyChoThueNha
                         }
                         else
                         {
+                            dgvTimNha.DataSource = null;
                             MessageBox.Show("Không có thông tin bạn muốn tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }                       
                         break;
@@ -96,6 +97,7 @@ namespace QuanLyChoThueNha
                         }
                         else
                         {
+                            dgvTimNha.DataSource = null;
                             MessageBox.Show("Không có thông tin bạn muốn tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         break;
@@ -107,10 +109,17 @@ namespace QuanLyChoThueNha
                         }
                         else
                         {
+                            dgvTimNha.DataSource = null;
                             MessageBox.Show("Không có thông tin bạn muốn tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         break;
-
+                }
+                if (dgvTimNha.Rows.Count > 0)
+                {
+                    btnExcelNha.Enabled = true;
+                } else
+                {
+                    btnExcelNha.Enabled = false;
                 }
             }
             
@@ -165,10 +174,10 @@ namespace QuanLyChoThueNha
                         if (ten.Rows.Count > 0)
                         {
                             dgvTimKhach.DataSource = ten;
-                            
                         }
                         else
                         {
+                            dgvTimKhach.DataSource = null;
                             MessageBox.Show("Không có thông tin bạn muốn tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         txtTim2.Clear();
@@ -178,10 +187,10 @@ namespace QuanLyChoThueNha
                         if (dckhach.Rows.Count > 0)
                         {
                             dgvTimKhach.DataSource = dckhach;
-                            
                         }
                         else
                         {
+                            dgvTimKhach.DataSource = null;
                             MessageBox.Show("Không có thông tin bạn muốn tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         txtTim2.Clear();
@@ -194,16 +203,37 @@ namespace QuanLyChoThueNha
                         }
                         else
                         {
+                            dgvTimKhach.DataSource = null;
                             MessageBox.Show("Không có thông tin bạn muốn tìm kiếm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         txtTim2.Clear();
                         break;
                 }
+                if (dgvTimKhach.Rows.Count > 0)
+                {
+                    btnExcelKH.Enabled = true;
+                } else
+                {
+                    btnExcelKH.Enabled = false;
+                }
             }
 
         }
 
-        #endregion
+        private void btnExcelKH_Click(object sender, EventArgs e)
+        {
+            string titleExcel = "Danh sách " + cbTim2.Text + ": " + txtTim2.Text;
+            ExportExcel ee = new ExportExcel();
+            ee.ExportFileExcel(dgvTimNha, titleExcel);
+        }
 
+        private void btnExcelNha_Click(object sender, EventArgs e)
+        {
+            string titleExcel = "Danh sách " + cbTim1.Text + ": " + cbTim1_1.Text;
+            ExportExcel ee = new ExportExcel();
+            ee.ExportFileExcel(dgvTimNha, titleExcel);
+        }
+
+        #endregion
     }
 }

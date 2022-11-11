@@ -41,7 +41,7 @@ namespace QuanLyChoThueNha
                     txtGiaPhong.Text = thongTinNha.GiaPhong;
                     txtTienDien.Text = thongTinNha.TienDien;
                     txtTienNuoc.Text = thongTinNha.TienNuoc;
-                    cbTT.Text = thongTinNha.TinhTrangThue;
+                    txtTTT.Text = thongTinNha.TinhTrangThue;
                     cbLoaiNha.Text = thongTinNha.TenLoai;
                     cbDTSD.Text = thongTinNha.DTSD;
                     pic.Image = Image.FromFile(thongTinNha.AnhMinhHoa);
@@ -78,7 +78,6 @@ namespace QuanLyChoThueNha
             txtGiaPhong.Enabled = b;
             txtTienDien.Enabled = b;
             txtTienNuoc.Enabled = b;
-            cbTT.Enabled = b;
             cbLoaiNha.Enabled = b;
             cbDTSD.Enabled = b;
             pic.Enabled = b;
@@ -116,11 +115,6 @@ namespace QuanLyChoThueNha
                 MessageBox.Show("Không được để trống tiền nước!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (cbTT.SelectedIndex == -1)
-            {
-                MessageBox.Show("Chưa chọn tình trạng nhà!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
             if (cbLoaiNha.SelectedIndex == -1)
             {
                 MessageBox.Show("Chưa chọn loại nhà!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -147,7 +141,6 @@ namespace QuanLyChoThueNha
             txtGiaPhong.Clear();
             txtTienDien.Clear();
             txtTienNuoc.Clear();
-            cbTT.SelectedIndex = -1;
             cbDTSD.SelectedIndex = -1;
             cbLoaiNha.SelectedIndex = -1;
             lbURL.Text = null;
@@ -171,18 +164,19 @@ namespace QuanLyChoThueNha
             con = new ConnectSQL();
             StateButton(true);
             StateInput(false);
-            cbTT.Items.Add("Đã thuê");
-            cbTT.Items.Add("Chưa thuê");
 
-            cbLoaiNha.Items.Add("Cấp 4");
-            cbLoaiNha.Items.Add("2 tầng");
-            cbLoaiNha.Items.Add("3 tầng");
-            cbLoaiNha.Items.Add("Phòng trọ");
-            cbLoaiNha.Items.Add("Chung cư mini");
 
-            cbDTSD.Items.Add("Sinh viên");
-            cbDTSD.Items.Add("Người lao động");
-            cbDTSD.Items.Add("Văn phòng");
+            DataTable dataTable = con.SelectData("select TenLoai from LoaiNha");
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                cbLoaiNha.Items.Add(dataTable.Rows[i]["TenLoai"].ToString());
+            }
+
+            DataTable dataTable1 = con.SelectData("select TenDTSD from DoiTuongSuDung");
+            for (int i = 0; i < dataTable1.Rows.Count; i++)
+            {
+                cbDTSD.Items.Add(dataTable1.Rows[i]["TenDTSD"].ToString());
+            }
         }
 
         private void pic_Click(object sender, EventArgs e)
@@ -279,7 +273,7 @@ namespace QuanLyChoThueNha
                         string strGiaPhong = txtGiaPhong.Text;
                         string strTienDien = txtTienDien.Text;
                         string strTienNuoc = txtTienNuoc.Text;
-                        string strTTT = cbTT.Text;
+                        string strTTT = txtTTT.Text;
                         string strLoaiNha = cbLoaiNha.Text;
                         string strMaLN = (string)con.ExecuteScalar($"select maloai from loainha where tenloai = N'{strLoaiNha}'");
                         string strDTSD = cbDTSD.Text;
@@ -336,7 +330,7 @@ namespace QuanLyChoThueNha
                     string strGiaPhong = txtGiaPhong.Text;
                     string strTienDien = txtTienDien.Text;
                     string strTienNuoc = txtTienNuoc.Text;
-                    string strTTT = cbTT.Text;
+                    string strTTT = txtTTT.Text;
                     string strLoaiNha = cbLoaiNha.Text;
                     string strDTSD = cbDTSD.Text;
                     string strURL = lbURL.Text.ToString();

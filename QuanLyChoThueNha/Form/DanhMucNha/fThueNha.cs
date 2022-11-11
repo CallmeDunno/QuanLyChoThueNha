@@ -1,5 +1,6 @@
 ﻿using QuanLyChoThueNha.SQLConn;
 using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -86,9 +87,11 @@ namespace QuanLyChoThueNha
             con = new ConnectSQL();
             txtMaNha.Text = Id.ToString();
 
-            cbMDSD.Items.Add("Làm việc");
-            cbMDSD.Items.Add("Ở");
-            cbMDSD.Items.Add("Bán hàng");
+            DataTable dataTable = con.SelectData("select TenMucDichSD from MucDichSuDung");
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                cbMDSD.Items.Add(dataTable.Rows[i]["TenMucDichSD"].ToString());
+            }
 
             cbHTTT.Items.Add("Chuyển khoản");
             cbHTTT.Items.Add("Tiền mặt");

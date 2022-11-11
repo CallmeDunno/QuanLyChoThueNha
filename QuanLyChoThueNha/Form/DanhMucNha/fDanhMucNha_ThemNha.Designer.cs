@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbDTSD = new System.Windows.Forms.ComboBox();
             this.cbLoaiNha = new System.Windows.Forms.ComboBox();
-            this.cbTT = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -60,6 +59,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtTTT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,9 +77,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtTTT);
             this.groupBox1.Controls.Add(this.cbDTSD);
             this.groupBox1.Controls.Add(this.cbLoaiNha);
-            this.groupBox1.Controls.Add(this.cbTT);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.lbURL);
             this.groupBox1.Controls.Add(this.pic);
@@ -126,16 +126,6 @@
             this.cbLoaiNha.Name = "cbLoaiNha";
             this.cbLoaiNha.Size = new System.Drawing.Size(271, 33);
             this.cbLoaiNha.TabIndex = 8;
-            // 
-            // cbTT
-            // 
-            this.cbTT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbTT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTT.FormattingEnabled = true;
-            this.cbTT.Location = new System.Drawing.Point(243, 604);
-            this.cbTT.Name = "cbTT";
-            this.cbTT.Size = new System.Drawing.Size(186, 33);
-            this.cbTT.TabIndex = 7;
             // 
             // panel2
             // 
@@ -380,6 +370,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên chủ nhà:";
             // 
+            // txtTTT
+            // 
+            this.txtTTT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTTT.Enabled = false;
+            this.txtTTT.Location = new System.Drawing.Point(243, 604);
+            this.txtTTT.Name = "txtTTT";
+            this.txtTTT.Size = new System.Drawing.Size(320, 30);
+            this.txtTTT.TabIndex = 7;
+            this.txtTTT.Text = "Chưa thuê";
+            // 
             // fDanhMucNha_ThemNha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -430,8 +430,8 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.ComboBox cbTT;
         private System.Windows.Forms.ComboBox cbLoaiNha;
         private System.Windows.Forms.ComboBox cbDTSD;
+        private System.Windows.Forms.TextBox txtTTT;
     }
 }

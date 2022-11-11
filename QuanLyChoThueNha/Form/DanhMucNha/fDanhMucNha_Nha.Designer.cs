@@ -118,7 +118,7 @@
             // 
             // btnThue
             // 
-            this.btnThue.Location = new System.Drawing.Point(578, 714);
+            this.btnThue.Location = new System.Drawing.Point(778, 714);
             this.btnThue.Name = "btnThue";
             this.btnThue.Size = new System.Drawing.Size(110, 47);
             this.btnThue.TabIndex = 4;
@@ -129,13 +129,12 @@
             // 
             // btnTaiSan
             // 
-            this.btnTaiSan.Location = new System.Drawing.Point(758, 714);
+            this.btnTaiSan.Location = new System.Drawing.Point(578, 714);
             this.btnTaiSan.Name = "btnTaiSan";
             this.btnTaiSan.Size = new System.Drawing.Size(125, 47);
             this.btnTaiSan.TabIndex = 4;
             this.btnTaiSan.Text = "Tài sản";
             this.btnTaiSan.UseVisualStyleBackColor = true;
-            this.btnTaiSan.Visible = false;
             this.btnTaiSan.Click += new System.EventHandler(this.btnTaiSan_Click);
             // 
             // btnThuTienNha

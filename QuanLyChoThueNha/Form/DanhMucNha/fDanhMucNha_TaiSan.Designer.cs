@@ -35,8 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtGiaTri = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtTenTaiSan = new System.Windows.Forms.TextBox();
-            this.cmbMaTaiSan = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +45,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbMaNha = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbTenTS = new System.Windows.Forms.ComboBox();
+            this.txtMaTS = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiSan)).BeginInit();
@@ -60,7 +60,7 @@
             // 
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHuy.Location = new System.Drawing.Point(36, 198);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(6);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(137, 50);
             this.btnHuy.TabIndex = 4;
@@ -72,7 +72,7 @@
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXoa.Location = new System.Drawing.Point(36, 136);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(6);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(137, 50);
             this.btnXoa.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSua.Location = new System.Drawing.Point(36, 74);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(6);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(137, 50);
             this.btnSua.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThem.Location = new System.Drawing.Point(36, 12);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(6);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(137, 50);
             this.btnThem.TabIndex = 1;
@@ -119,7 +119,7 @@
             // 
             this.txtGiaTri.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtGiaTri.Location = new System.Drawing.Point(156, 198);
-            this.txtGiaTri.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtGiaTri.Margin = new System.Windows.Forms.Padding(6);
             this.txtGiaTri.Name = "txtGiaTri";
             this.txtGiaTri.Size = new System.Drawing.Size(397, 30);
             this.txtGiaTri.TabIndex = 4;
@@ -129,32 +129,11 @@
             // 
             this.txtSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSoLuong.Location = new System.Drawing.Point(156, 146);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(6);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(397, 30);
             this.txtSoLuong.TabIndex = 4;
             this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
-            // 
-            // txtTenTaiSan
-            // 
-            this.txtTenTaiSan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenTaiSan.Enabled = false;
-            this.txtTenTaiSan.Location = new System.Drawing.Point(156, 94);
-            this.txtTenTaiSan.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtTenTaiSan.Name = "txtTenTaiSan";
-            this.txtTenTaiSan.Size = new System.Drawing.Size(397, 30);
-            this.txtTenTaiSan.TabIndex = 4;
-            // 
-            // cmbMaTaiSan
-            // 
-            this.cmbMaTaiSan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbMaTaiSan.FormattingEnabled = true;
-            this.cmbMaTaiSan.Location = new System.Drawing.Point(156, 29);
-            this.cmbMaTaiSan.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.cmbMaTaiSan.Name = "cmbMaTaiSan";
-            this.cmbMaTaiSan.Size = new System.Drawing.Size(397, 33);
-            this.cmbMaTaiSan.TabIndex = 3;
-            this.cmbMaTaiSan.TextChanged += new System.EventHandler(this.cmbMaTaiSan_TextChanged);
             // 
             // label4
             // 
@@ -182,7 +161,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 94);
+            this.label3.Location = new System.Drawing.Point(42, 84);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 25);
@@ -205,9 +184,9 @@
             this.groupBox1.Controls.Add(this.dgvTaiSan);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Location = new System.Drawing.Point(0, 43);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(825, 354);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -221,7 +200,7 @@
             this.dgvTaiSan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTaiSan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTaiSan.Location = new System.Drawing.Point(6, 29);
-            this.dgvTaiSan.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvTaiSan.Margin = new System.Windows.Forms.Padding(6);
             this.dgvTaiSan.Name = "dgvTaiSan";
             this.dgvTaiSan.ReadOnly = true;
             this.dgvTaiSan.RowHeadersWidth = 51;
@@ -262,20 +241,38 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.cbTenTS);
+            this.panel3.Controls.Add(this.txtMaTS);
             this.panel3.Controls.Add(this.txtSoLuong);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.txtGiaTri);
-            this.panel3.Controls.Add(this.cmbMaTaiSan);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.txtTenTaiSan);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 397);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(618, 258);
             this.panel3.TabIndex = 7;
+            // 
+            // cbTenTS
+            // 
+            this.cbTenTS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTenTS.FormattingEnabled = true;
+            this.cbTenTS.Location = new System.Drawing.Point(156, 84);
+            this.cbTenTS.Name = "cbTenTS";
+            this.cbTenTS.Size = new System.Drawing.Size(397, 33);
+            this.cbTenTS.TabIndex = 7;
+            this.cbTenTS.SelectedIndexChanged += new System.EventHandler(this.cbTenTS_SelectedIndexChanged);
+            // 
+            // txtMaTS
+            // 
+            this.txtMaTS.Enabled = false;
+            this.txtMaTS.Location = new System.Drawing.Point(156, 29);
+            this.txtMaTS.Name = "txtMaTS";
+            this.txtMaTS.Size = new System.Drawing.Size(397, 30);
+            this.txtMaTS.TabIndex = 6;
             // 
             // panel4
             // 
@@ -298,7 +295,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "fDanhMucNha_TaiSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fDanhMucNha_TaiSan";
@@ -322,8 +319,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtGiaTri;
         private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtTenTaiSan;
-        private System.Windows.Forms.ComboBox cmbMaTaiSan;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnXoa;
@@ -335,5 +330,7 @@
         private System.Windows.Forms.Label lbMaNha;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox cbTenTS;
+        private System.Windows.Forms.TextBox txtMaTS;
     }
 }

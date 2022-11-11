@@ -34,6 +34,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvTimNha = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExcelNha = new System.Windows.Forms.Button();
             this.cbTim1_1 = new System.Windows.Forms.ComboBox();
             this.btnTimNha = new System.Windows.Forms.Button();
             this.cbTim1 = new System.Windows.Forms.ComboBox();
@@ -42,6 +43,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvTimKhach = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnExcelKH = new System.Windows.Forms.Button();
             this.btnTimKhach = new System.Windows.Forms.Button();
             this.txtTim2 = new System.Windows.Forms.TextBox();
             this.cbTim2 = new System.Windows.Forms.ComboBox();
@@ -117,6 +119,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnExcelNha);
             this.panel2.Controls.Add(this.cbTim1_1);
             this.panel2.Controls.Add(this.btnTimNha);
             this.panel2.Controls.Add(this.cbTim1);
@@ -127,8 +130,21 @@
             this.panel2.Size = new System.Drawing.Size(1222, 94);
             this.panel2.TabIndex = 0;
             // 
+            // btnExcelNha
+            // 
+            this.btnExcelNha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnExcelNha.Enabled = false;
+            this.btnExcelNha.Location = new System.Drawing.Point(1065, 19);
+            this.btnExcelNha.Name = "btnExcelNha";
+            this.btnExcelNha.Size = new System.Drawing.Size(125, 45);
+            this.btnExcelNha.TabIndex = 5;
+            this.btnExcelNha.Text = "Excel";
+            this.btnExcelNha.UseVisualStyleBackColor = true;
+            this.btnExcelNha.Click += new System.EventHandler(this.btnExcelNha_Click);
+            // 
             // cbTim1_1
             // 
+            this.cbTim1_1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbTim1_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTim1_1.FormattingEnabled = true;
             this.cbTim1_1.Location = new System.Drawing.Point(514, 25);
@@ -138,6 +154,7 @@
             // 
             // btnTimNha
             // 
+            this.btnTimNha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTimNha.Location = new System.Drawing.Point(848, 19);
             this.btnTimNha.Name = "btnTimNha";
             this.btnTimNha.Size = new System.Drawing.Size(125, 45);
@@ -148,6 +165,7 @@
             // 
             // cbTim1
             // 
+            this.cbTim1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbTim1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTim1.FormattingEnabled = true;
             this.cbTim1.Location = new System.Drawing.Point(183, 26);
@@ -158,6 +176,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 26);
             this.label1.Name = "label1";
@@ -205,6 +224,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnExcelKH);
             this.panel4.Controls.Add(this.btnTimKhach);
             this.panel4.Controls.Add(this.txtTim2);
             this.panel4.Controls.Add(this.cbTim2);
@@ -215,9 +235,21 @@
             this.panel4.Size = new System.Drawing.Size(1222, 100);
             this.panel4.TabIndex = 0;
             // 
+            // btnExcelKH
+            // 
+            this.btnExcelKH.Enabled = false;
+            this.btnExcelKH.Location = new System.Drawing.Point(1065, 19);
+            this.btnExcelKH.Name = "btnExcelKH";
+            this.btnExcelKH.Size = new System.Drawing.Size(125, 45);
+            this.btnExcelKH.TabIndex = 9;
+            this.btnExcelKH.Text = "Excel";
+            this.btnExcelKH.UseVisualStyleBackColor = true;
+            this.btnExcelKH.Click += new System.EventHandler(this.btnExcelKH_Click);
+            // 
             // btnTimKhach
             // 
-            this.btnTimKhach.Location = new System.Drawing.Point(1000, 29);
+            this.btnTimKhach.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTimKhach.Location = new System.Drawing.Point(848, 19);
             this.btnTimKhach.Name = "btnTimKhach";
             this.btnTimKhach.Size = new System.Drawing.Size(125, 45);
             this.btnTimKhach.TabIndex = 8;
@@ -227,26 +259,29 @@
             // 
             // txtTim2
             // 
-            this.txtTim2.Location = new System.Drawing.Point(615, 35);
+            this.txtTim2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTim2.Location = new System.Drawing.Point(514, 25);
             this.txtTim2.Name = "txtTim2";
             this.txtTim2.Size = new System.Drawing.Size(280, 30);
             this.txtTim2.TabIndex = 7;
             // 
             // cbTim2
             // 
+            this.cbTim2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbTim2.BackColor = System.Drawing.SystemColors.Window;
             this.cbTim2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTim2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cbTim2.FormattingEnabled = true;
-            this.cbTim2.Location = new System.Drawing.Point(210, 35);
+            this.cbTim2.Location = new System.Drawing.Point(183, 26);
             this.cbTim2.Name = "cbTim2";
             this.cbTim2.Size = new System.Drawing.Size(280, 33);
             this.cbTim2.TabIndex = 6;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 35);
+            this.label2.Location = new System.Drawing.Point(13, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 25);
             this.label2.TabIndex = 0;
@@ -300,5 +335,7 @@
         private System.Windows.Forms.TextBox txtTim2;
         private System.Windows.Forms.ComboBox cbTim2;
         private System.Windows.Forms.ComboBox cbTim1_1;
+        private System.Windows.Forms.Button btnExcelNha;
+        private System.Windows.Forms.Button btnExcelKH;
     }
 }

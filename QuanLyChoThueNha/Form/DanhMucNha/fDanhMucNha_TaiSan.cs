@@ -32,10 +32,10 @@ namespace QuanLyChoThueNha
         }
         private bool checkInput()
         {
-            if (cmbMaTaiSan.Text == "")
+            if (txtMaTS.Text == "")
             {
                 MessageBox.Show("Không được để trống mã tài sản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbMaTaiSan.Focus();
+                txtMaTS.Focus();
                 return false;
             }
             if (txtSoLuong.Text == "")
@@ -65,10 +65,10 @@ namespace QuanLyChoThueNha
                 $"where manha = '{id}'";
             dgvTaiSan.DataSource = connect.SelectData(query);
             lbMaNha.Text = "Mã nhà: " + id.ToString();
-            DataTable dataTable = connect.SelectData("select mataisan from taisan");
+            DataTable dataTable = connect.SelectData("select TenTaiSan from taisan");
             for (int i = 0; i < dataTable.Rows.Count; i++)
             {
-                cmbMaTaiSan.Items.Add(dataTable.Rows[i]["MaTaiSan"].ToString());
+                cbTenTS.Items.Add(dataTable.Rows[i]["TenTaiSan"].ToString());
             }
         }
 
@@ -97,14 +97,14 @@ namespace QuanLyChoThueNha
                 btnThem.Focus();
                 string message = "Xác nhận thêm tài sản cho nhà có " +
                     "\n Mã nhà: " + id +
-                    "\n Mã tài sản: " + cmbMaTaiSan.Text.Trim() +
-                    "\n Tên tài sản: " + txtTenTaiSan.Text.Trim() +
+                    "\n Mã tài sản: " + txtMaTS.Text.Trim() +
+                    "\n Tên tài sản: " + cbTenTS.Text.Trim() +
                     "\n Số lượng: " + txtSoLuong.Text.Trim() +
                     "\n Giá trị: " + txtGiaTri.Text.Trim();
                 if (MessageBox.Show(message,"Thông báo",MessageBoxButtons.YesNo,
                     MessageBoxIcon.Asterisk) == DialogResult.Yes)
                 {
-                    string query = $"insert into nha_taisan values ('{id}','{cmbMaTaiSan.Text.Trim()}'," +
+                    string query = $"insert into nha_taisan values ('{id}','{txtMaTS.Text.Trim()}'," +
                         $"'{txtSoLuong.Text.Trim()}','{txtGiaTri.Text.Trim()}')";
                     try
                     {
@@ -131,15 +131,15 @@ namespace QuanLyChoThueNha
             }
             string message = "Xác nhận sửa thông tin tài sản" +
                     "\n Mã nhà: " + id +
-                    "\n Mã tài sản: " + cmbMaTaiSan.Text.Trim() +
-                    "\n Tên tài sản: " + txtTenTaiSan.Text.Trim() +
+                    "\n Mã tài sản: " + txtMaTS.Text.Trim() +
+                    "\n Tên tài sản: " + cbTenTS.Text.Trim() +
                     "\n Số lượng: " + txtSoLuong.Text.Trim() +
                     "\n Giá trị: " + txtGiaTri.Text.Trim();
             if (MessageBox.Show(message, "Thông báo", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Asterisk) == DialogResult.Yes)
             {
                 string query = $"update nha_taisan set soluong = '{txtSoLuong.Text.Trim()}', giatri = '{txtGiaTri.Text.Trim()}'" +
-                    $" where manha = '{id}' and mataisan = '{cmbMaTaiSan.Text.Trim()}'";
+                    $" where manha = '{id}' and mataisan = '{txtMaTS.Text.Trim()}'";
                 try
                 {
                     connect.ExecuteIUDQuery(query);
@@ -163,14 +163,14 @@ namespace QuanLyChoThueNha
                 btnXoa.Focus();
                 string message = "Xác nhận thêm tài sản cho nhà có " +
                     "\n Mã nhà: " + id +
-                    "\n Mã tài sản: " + cmbMaTaiSan.Text.Trim() +
-                    "\n Tên tài sản: " + txtTenTaiSan.Text.Trim() +
+                    "\n Mã tài sản: " + txtMaTS.Text.Trim() +
+                    "\n Tên tài sản: " + cbTenTS.Text.Trim() +
                     "\n Số lượng: " + txtSoLuong.Text.Trim() +
                     "\n Giá trị: " + txtGiaTri.Text.Trim();
                 if (MessageBox.Show(message, "Thông báo", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Asterisk) == DialogResult.Yes)
                 {
-                    string query = $"delete from nha_taisan where manha = '{id}' and mataisan = '{cmbMaTaiSan.Text.Trim()}'";
+                    string query = $"delete from nha_taisan where manha = '{id}' and mataisan = '{txtMaTS.Text.Trim()}'";
                     try
                     {
                         connect.ExecuteIUDQuery(query);
@@ -188,31 +188,32 @@ namespace QuanLyChoThueNha
 
         private void dgvTaiSan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cmbMaTaiSan.Text = dgvTaiSan.SelectedRows[0].Cells[1].Value.ToString();
+            txtMaTS.Text = dgvTaiSan.SelectedRows[0].Cells[1].Value.ToString();
+            cbTenTS.Text = dgvTaiSan.SelectedRows[0].Cells[2].Value.ToString();
             txtSoLuong.Text = dgvTaiSan.SelectedRows[0].Cells[3].Value.ToString();
             txtGiaTri.Text = dgvTaiSan.SelectedRows[0].Cells[4].Value.ToString();
         }
 
-        private void cmbMaTaiSan_TextChanged(object sender, EventArgs e)
-        {
-            string query = $"select tentaisan from taisan where mataisan ='{cmbMaTaiSan.Text.Trim()}'";
-            DataTable dataTable = connect.SelectData(query);
-            try
-            {
-                txtTenTaiSan.Text = dataTable.Rows[0]["TenTaiSan"].ToString();
-            }
-            catch
-            {
-                txtTenTaiSan.Text = "";
-            }
-        }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            cmbMaTaiSan.Text = "";
+            cbTenTS.SelectedIndex = -1;
             txtSoLuong.Text = "";
             txtGiaTri.Text = "";
             state_Button(true);
+        }
+
+        private void cbTenTS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = $"select mataisan from taisan where tentaisan = N'{cbTenTS.Text.Trim()}'";
+            DataTable dataTable = connect.SelectData(query);
+            try
+            {
+                txtMaTS.Text = dataTable.Rows[0]["mataisan"].ToString();
+            }
+            catch
+            {
+                txtMaTS.Text = "";
+            }
         }
 
         #endregion
